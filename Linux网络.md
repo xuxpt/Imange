@@ -4,7 +4,7 @@
 
 Linux中断处理函数是分上半部和下半部的。上半部是只进行最简单的工作，快速处理然后释放CPU，接着CPU就可以允许其它中断进来。剩下将绝大部分的工作都放到下半部中，可以慢慢从容处理。下半部实现方式是软中断，由ksoftirqd内核线程全权处理。和硬中断不同的是，硬中断是通过给CPU物理引脚施加电压变化，而软中断是通过给内存中的一个变量的二进制值以通知软中断处理程序。
 
-<img src="C:\Users\张小航\AppData\Roaming\Typora\typora-user-images\image-20230306092259163.png" alt="image-20230306092259163" style="zoom: 80%;" />
+https://github.com/xuxpt/Imange/blob/main/Internet/image-20230306092259163.png
 
 DMA：直接存储器存储。skb：待处理队列。RingBuff：环形缓冲区。
 
